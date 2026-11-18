@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resume Builder</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <header class="topbar no-print">
+    <h2>Resume Builder</h2>
+    <div>
+      <button id="saveBtn">Save</button>
+      <button id="printBtn">Download PDF</button>
+      <button id="logoutBtn" class="ghost">Logout</button>
+    </div>
+  </header>
+
+  <main class="layout">
+    <section class="editor no-print">
+      <h3>Personal</h3>
+      <input id="fullName" placeholder="Full name" />
+      <input id="email" placeholder="Email" />
+      <input id="phone" placeholder="Phone" />
+      <input id="address" placeholder="Address" />
+      <textarea id="summary" placeholder="Professional summary"></textarea>
+
+      <h3>Skills <small>(comma separated)</small></h3>
+      <input id="skills" placeholder="HTML, CSS, JavaScript, Node.js" />
+
+      <h3>Education <button class="add" data-add="education">+ Add</button></h3>
+      <div id="education"></div>
+
+      <h3>Experience <button class="add" data-add="experience">+ Add</button></h3>
+      <div id="experience"></div>
+
+      <h3>Projects <button class="add" data-add="projects">+ Add</button></h3>
+      <div id="projects"></div>
+      <p id="status"></p>
+    </section>
+
+    <section class="preview" id="preview"></section>
+  </main>
+  <script src="js/builder.js"></script>
+</body>
+</html>
